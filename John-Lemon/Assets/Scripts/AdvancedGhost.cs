@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -26,27 +25,25 @@ public class AdvancedGhost : MonoBehaviour
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
-private void awake()
-{
-    player = GameObject.Find("JohnLemon").transform;
-    agent = GetComponent<NavMeshAgent>();
-}
 
-private void Update()
-{
-    //Check for player in sight and attack range
-    playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-    playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
-    if (!playerInSightRange && !playerInAttackRange) Patrolling();
-    if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-    if (playerInAttackRange && playerInSightRange) AttackPlayer();
+    private void Awake()
     {
-        
+        player = GameObject.Find("JohnLemon").transform;
+        agent = GetComponent<NavMeshAgent>();
     }
-}
 
-    private void Patrolling()
+    private void Update()
+    {
+        //Check for sight and attack range
+        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
+        if (!playerInSightRange && !playerInAttackRange) Patroling();
+        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+        if (playerInAttackRange && playerInSightRange) AttackPlayer();
+    }
+
+    private void Patroling()
     {
         if (!walkPointSet) SearchWalkPoint();
 
@@ -79,7 +76,7 @@ private void Update()
     private void AttackPlayer()
     {
         //Make sure enemy doesn't move
-        agent.SetDestination(transform.position);
+        agent.SetDestination(player.position);
 
         transform.LookAt(player);
 
