@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6334323197656421965
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 514639107733486472, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 514639107733486472, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: gameEnding
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560149060, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560149060, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560149060, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560149060, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560149060, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560149060, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560149060, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560149060, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560149060, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560149060, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560149060, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739747385560379492, guid: 40e6d3c13917ee142bf62523e69389e6,
+        type: 3}
+      propertyPath: m_Name
+      value: AdvancedGhost' Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2615782583007396143, guid: 40e6d3c13917ee142bf62523e69389e6, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 40e6d3c13917ee142bf62523e69389e6, type: 3}
+--- !u!1 &5750210950161393193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1739747385560379492, guid: 40e6d3c13917ee142bf62523e69389e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 6334323197656421965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &5214041288876355459 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 2284441627065989582, guid: 40e6d3c13917ee142bf62523e69389e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 6334323197656421965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8377353946728205535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5750210950161393193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dd334f048aa9845934d15cfbed35fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 5214041288876355459}
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  health: 100
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 10
+  timeBetweenAttacks: 2
+  projectile: {fileID: 0}
+  sightRange: 5
+  attackRange: 5
+  playerInSightRange: 0
+  playerInAttackRange: 0
