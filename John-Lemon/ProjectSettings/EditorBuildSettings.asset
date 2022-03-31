@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 53852d8782a23e648b3e4718f9c23f5f
+  - enabled: 1
+    path: Assets/Scenes/NewBareBones.unity
+    guid: c9fd9e655ee1b65408061ab700a9e066
   m_configObjects: {}
